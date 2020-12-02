@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.UserListFrag"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="User list"
+        android:gravity="center"
+        android:background="#4B00A3"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/noListAvailable"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="No user list available"
+        android:visibility="gone"
+        android:fontFamily="@font/quicksand_bold"
+        android:textSize="22sp"
+        android:textColor="@color/black"
+        android:gravity="center"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_weight="1"
+        android:layout_width="60dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:background="#4B00A3">
+
+        <Button
+            android:id="@+id/prevBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Prev"/>
+
+        <TextView
+            android:id="@+id/currentPage"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Current page: 1"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/nextBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Next"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
